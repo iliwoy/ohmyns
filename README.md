@@ -16,7 +16,8 @@ dig +short random-1.echo.ohmyns.com txt @8.8.8.8
 dig random-1_log.trace.ohmyns.com
 
 curl https://ohmyns.com/dns/resolver/trace\?domain\=random-1_log.trace.ohmyns.com                       
-  {"success":true,"message":null,"resolverIP":"74.125.80.139","clientIP":"221.218.171.75","timestamp":"2018-10-19T15:15:08.319+0000"}
+  {"success":true,"message":null,"resolverIP":"74.125.80.139","clientIP":"221.218.171.75",
+  "timestamp":"2018-10-19T15:15:08.319+0000"}
 ```
 
 ```shell
