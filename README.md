@@ -1,23 +1,41 @@
 # Oh My NS
 
 ## Usage
-
 ```shell
 dig +short help.ohmyns.com txt
   "makefragment; fragment; cname; ttl; sleep; black; white; echo; log"
+
+dig +short cname.help.ohmyns.com txt
+  "example: dig cname-subdomain.trace.ohmyns.com"
 ```
 
+## Echo
 ```shell
 dig +short random-1.echo.ohmyns.com txt @8.8.8.8
   "query: random-1.echo.ohmyns.com, resolver: 74.125.186.79:43785, txid: 40033"
 ```
 
+## Trace
 ```shell
 dig random-1_log.trace.ohmyns.com
 
 curl https://ohmyns.com/dns/resolver/trace\?domain\=random-1_log.trace.ohmyns.com                       
-  {"success":true,"message":null,"resolverIP":"74.125.80.139","clientIP":"221.218.171.75",
-  "timestamp":"2018-10-19T15:15:08.319+0000"}
+  {
+    "success": true,
+    "message": null,
+    "resolverIP": "74.125.80.139",
+    "clientIP": "221.218.171.75",
+    "timestamp": "2018-10-19T15:15:08.319+0000"
+  }
+
+curl https://ohmyns.com/dns/resolver/trace/jsonp\?domain\=random-1_log.trace.ohmyns.com\&callback\=callback
+  callback({
+    "success": true,
+    "message": null,
+    "resolverIP": "74.125.80.139",
+    "clientIP": "221.218.171.75",
+    "timestamp": "2018-10-19T15:15:08.319+0000"
+  })
 ```
 
 ```shell
