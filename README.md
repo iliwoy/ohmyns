@@ -31,10 +31,10 @@ dig ttl-20_cname-random.trace.ohmyns.com
   ttl-20_cname-random.trace.ohmyns.com. 19 IN CNAME random.trace.ohmyns.com.
   random.trace.ohmyns.com. 0	IN	A	39.107.97.203
 
-dig cname-subdomain.trace.ohmyns.com
+dig ttl-20_cname-ttl-10--random.trace.ohmyns.com
   ;; ANSWER SECTION:
-  cname-subdomain.trace.ohmyns.com. 0 IN	CNAME	subdomain.trace.ohmyns.com.
-  subdomain.trace.ohmyns.com. 0	IN	A	39.107.97.203
+  ttl-20_cname-ttl-10--random.trace.ohmyns.com. 19 IN CNAME ttl-10_random.trace.ohmyns.com.
+  ttl-10_random.trace.ohmyns.com.	9 IN	A	39.107.97.203
 ```
 
 ```shell
