@@ -1,4 +1,4 @@
-# ohmyns
+# Oh My NS
 
 ## Usage
 
