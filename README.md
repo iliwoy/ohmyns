@@ -8,11 +8,15 @@ dig +short help.ohmyns.com txt
 ```
 
 ```shell
-dig +short makefragment.help.ohmyns.com txt
-  "usage: dig +short txt makefragment-1480_suffix-random.help.ohmyns.com"
+dig +short random-1.echo.ohmyns.com txt @8.8.8.8
+  "query: random-1.echo.ohmyns.com, resolver: 74.125.186.79:43785, txid: 40033"
+```
 
-dig +short txt makefragment-1480_suffix-random.help.ohmyns.com
-  "fragment-001-007-178-178-062-010-020-030-4096-random000.trace.ohmyns.com"
+```shell
+dig random-1_log.trace.ohmyns.com
+
+curl https://ohmyns.com/dns/resolver/trace\?domain\=random-1_log.trace.ohmyns.com                       
+  {"success":true,"message":null,"resolverIP":"74.125.80.139","clientIP":"221.218.171.75","timestamp":"2018-10-19T15:15:08.319+0000"}
 ```
 
 ```shell
@@ -38,13 +42,9 @@ dig ttl-20_cname-ttl-10--random.trace.ohmyns.com
 ```
 
 ```shell
-dig +short random-1.echo.ohmyns.com txt @8.8.8.8
-  "query: random-1.echo.ohmyns.com, resolver: 74.125.186.79:43785, txid: 40033"
-```
+dig +short makefragment.help.ohmyns.com txt
+  "usage: dig +short txt makefragment-1480_suffix-random.help.ohmyns.com"
 
-```shell
-dig random-1_log.trace.ohmyns.com
-
-curl https://ohmyns.com/dns/resolver/trace\?domain\=random-1_log.trace.ohmyns.com                       
-  {"success":true,"message":null,"resolverIP":"74.125.80.139","clientIP":"221.218.171.75","timestamp":"2018-10-19T15:15:08.319+0000"}
+dig +short txt makefragment-1480_suffix-random.help.ohmyns.com
+  "fragment-001-007-178-178-062-010-020-030-4096-random000.trace.ohmyns.com"
 ```
